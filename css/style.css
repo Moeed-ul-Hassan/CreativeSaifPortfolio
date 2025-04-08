@@ -1,6 +1,6 @@
 /* ====================== Base Styles ====================== */
 :root {
-    /* Color Palette */
+    /* Color Palette - More Creative and Vibrant */
     --primary-color: #2c3e50;
     --secondary-color: #3498db;
     --accent-color: #e74c3c;
@@ -9,6 +9,15 @@
     --light-color: #ecf0f1;
     --dark-color: #121212;
     --gray-color: #95a5a6;
+    
+    /* New Creative Colors */
+    --teal-color: #1abc9c;
+    --emerald-color: #2ecc71;
+    --purple-color: #9b59b6;
+    --orange-color: #f39c12;
+    --pakistani-green: #01411c;
+    --pakistani-blue: #00a1c9;
+    --gold-color: #f1c40f;
     
     /* Typography */
     --heading-font: 'Playfair Display', serif;
@@ -32,8 +41,16 @@
     --border-radius-lg: 12px;
     --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     --box-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --box-shadow-colored: 0 5px 15px rgba(52, 152, 219, 0.3);
+    
+    /* Enhanced Gradients */
     --gradient-primary: linear-gradient(135deg, var(--secondary-color), var(--accent-color-2));
     --gradient-secondary: linear-gradient(135deg, var(--accent-color), var(--accent-color-3));
+    --gradient-teal: linear-gradient(135deg, var(--teal-color), var(--emerald-color));
+    --gradient-pakistan: linear-gradient(135deg, var(--pakistani-green), var(--pakistani-blue));
+    --gradient-sunset: linear-gradient(135deg, var(--orange-color), var(--accent-color));
+    --gradient-royal: linear-gradient(135deg, var(--purple-color), var(--secondary-color));
+    --gradient-gold: linear-gradient(135deg, var(--gold-color), var(--orange-color));
 }
 
 * {
@@ -591,11 +608,47 @@ nav li {
     height: 5px;
     background: var(--gradient-primary);
     z-index: -1;
+    transition: height var(--transition-medium);
+}
+
+/* Custom gradient styles for service cards */
+.service-card[data-gradient="teal"]:before {
+    background: var(--gradient-teal);
+}
+
+.service-card[data-gradient="royal"]:before {
+    background: var(--gradient-royal);
+}
+
+.service-card[data-gradient="pakistan"]:before {
+    background: var(--gradient-pakistan);
+}
+
+.service-card[data-gradient="sunset"]:before {
+    background: var(--gradient-sunset);
+}
+
+.service-card[data-gradient="ocean"]:before {
+    background: var(--gradient-secondary);
+}
+
+.service-card[data-gradient="purple"]:before {
+    background: var(--gradient-royal);
+}
+
+.service-card:hover:before {
+    height: 100%;
+    opacity: 0.1;
 }
 
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--box-shadow-lg);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+    transition: transform 0.5s ease;
 }
 
 .service-icon {
@@ -612,11 +665,68 @@ nav li {
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
 }
 
+/* Custom gradient styles for service icons */
+.service-card[data-gradient="teal"] .service-icon {
+    background: var(--gradient-teal);
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
+}
+
+.service-card[data-gradient="royal"] .service-icon {
+    background: var(--gradient-royal);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+}
+
+.service-card[data-gradient="pakistan"] .service-icon {
+    background: var(--gradient-pakistan);
+    box-shadow: 0 5px 15px rgba(0, 161, 201, 0.3);
+}
+
+.service-card[data-gradient="sunset"] .service-icon {
+    background: var(--gradient-sunset);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.service-card[data-gradient="ocean"] .service-icon {
+    background: var(--gradient-secondary);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.service-card[data-gradient="purple"] .service-icon {
+    background: var(--gradient-royal);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+}
+
 .service-card h3 {
     font-family: var(--heading-font);
     font-size: 2.2rem;
     margin-bottom: var(--spacing-sm);
     color: var(--primary-color);
+    transition: color var(--transition-medium);
+}
+
+/* Custom heading color styles for service cards on hover */
+.service-card[data-gradient="teal"]:hover h3 {
+    color: var(--teal-color);
+}
+
+.service-card[data-gradient="royal"]:hover h3 {
+    color: var(--purple-color);
+}
+
+.service-card[data-gradient="pakistan"]:hover h3 {
+    color: var(--pakistani-green);
+}
+
+.service-card[data-gradient="sunset"]:hover h3 {
+    color: var(--orange-color);
+}
+
+.service-card[data-gradient="ocean"]:hover h3 {
+    color: var(--accent-color);
+}
+
+.service-card[data-gradient="purple"]:hover h3 {
+    color: var(--purple-color);
 }
 
 .service-card p {
@@ -641,11 +751,79 @@ nav li {
     transition: all var(--transition-fast);
 }
 
+/* Custom border color styles for service links */
+.service-card[data-gradient="teal"] .service-link {
+    color: var(--teal-color);
+    border-color: var(--teal-color);
+}
+
+.service-card[data-gradient="royal"] .service-link {
+    color: var(--purple-color);
+    border-color: var(--purple-color);
+}
+
+.service-card[data-gradient="pakistan"] .service-link {
+    color: var(--pakistani-green);
+    border-color: var(--pakistani-green);
+}
+
+.service-card[data-gradient="sunset"] .service-link {
+    color: var(--orange-color);
+    border-color: var(--orange-color);
+}
+
+.service-card[data-gradient="ocean"] .service-link {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.service-card[data-gradient="purple"] .service-link {
+    color: var(--purple-color);
+    border-color: var(--purple-color);
+}
+
 .service-link:hover {
     background-color: var(--secondary-color);
     color: var(--light-color);
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Custom gradient styles for service links on hover */
+.service-card[data-gradient="teal"] .service-link:hover {
+    background-color: var(--teal-color);
+    border-color: var(--teal-color);
+    box-shadow: 0 5px 15px rgba(26, 188, 156, 0.3);
+}
+
+.service-card[data-gradient="royal"] .service-link:hover {
+    background-color: var(--purple-color);
+    border-color: var(--purple-color);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
+}
+
+.service-card[data-gradient="pakistan"] .service-link:hover {
+    background-color: var(--pakistani-green);
+    border-color: var(--pakistani-green);
+    box-shadow: 0 5px 15px rgba(1, 65, 28, 0.3);
+}
+
+.service-card[data-gradient="sunset"] .service-link:hover {
+    background-color: var(--orange-color);
+    border-color: var(--orange-color);
+    box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+}
+
+.service-card[data-gradient="ocean"] .service-link:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+}
+
+.service-card[data-gradient="purple"] .service-link:hover {
+    background-color: var(--purple-color);
+    border-color: var(--purple-color);
+    box-shadow: 0 5px 15px rgba(155, 89, 182, 0.3);
 }
 
 /* ====================== Testimonials Section ====================== */
