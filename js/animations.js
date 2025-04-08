@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
     
+    // Create background particles
+    createParticles();
+    
     // Initialize animations once preloader is done (called from script.js)
     window.initAnimations = function() {
         // Home section animations
@@ -21,6 +24,62 @@ document.addEventListener('DOMContentLoaded', () => {
         animatePortfolioItems();
     };
 });
+
+// Create and animate background particles
+function createParticles() {
+    const container = document.getElementById('particles-container');
+    const colors = [
+        'rgba(52, 152, 219, 0.5)',  // Blue
+        'rgba(155, 89, 182, 0.5)',   // Purple
+        'rgba(46, 204, 113, 0.5)',   // Green
+        'rgba(26, 188, 156, 0.5)',   // Teal
+        'rgba(241, 196, 15, 0.5)'    // Yellow
+    ];
+    
+    // Create particles
+    for (let i = 0; i < 25; i++) {
+        // Create particle element
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        
+        // Random size between 10px and 40px
+        const size = Math.random() * 30 + 10;
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        
+        // Random position
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        particle.style.left = `${posX}%`;
+        particle.style.top = `${posY}%`;
+        
+        // Random color
+        const colorIndex = Math.floor(Math.random() * colors.length);
+        particle.style.backgroundColor = colors[colorIndex];
+        
+        // Random animation duration
+        const duration = Math.random() * 20 + 10; // 10-30s
+        particle.style.animationDuration = `${duration}s`;
+        
+        // Random delay
+        const delay = Math.random() * 5;
+        particle.style.animationDelay = `${delay}s`;
+        
+        // Add to container
+        container.appendChild(particle);
+        
+        // Add GSAP animation
+        gsap.to(particle, {
+            x: Math.random() * 200 - 100,
+            y: Math.random() * 200 - 100,
+            rotation: Math.random() * 360,
+            duration: duration,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+        });
+    }
+}
 
 // Home Section Animations
 function animateHomeSection() {
@@ -396,9 +455,10 @@ if (aboutImage) {
 }
 
 // Mouse follow animation for cursor on portfolio items
-const portfolioItems = document.querySelectorAll('.portfolio-item');
+// Using a different variable name to avoid conflicts with script.js
+const portfolioItemElements = document.querySelectorAll('.portfolio-item');
 
-portfolioItems.forEach(item => {
+portfolioItemElements.forEach(item => {
     item.addEventListener('mousemove', (e) => {
         // Get the bounding rectangle of the item
         const rect = item.getBoundingClientRect();
