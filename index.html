@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prof Saifullah Khalid | Content Writer</title>
+    <meta name="description" content="Professional portfolio of Prof Saifullah Khalid, content writer and Master in English">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="counter">0</div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">SK</div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <ul>
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#portfolio" class="mobile-nav-link">Portfolio</a></li>
+            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="home-content">
+                <h1 class="reveal-text">Prof Saifullah Khalid</h1>
+                <h2 class="reveal-text">Content Writer & English Expert</h2>
+                <div class="home-description">
+                    <p class="typewriter">Crafting words that resonate with purpose.</p>
+                </div>
+                <div class="cta-container">
+                    <a href="#portfolio" class="cta-button">View My Work</a>
+                    <a href="#contact" class="cta-button outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Who I Am</h3>
+                    <p>I am Prof Saifullah Khalid, a passionate content writer with a Master's degree in English. With years of experience in creating compelling narratives, I specialize in transforming complex ideas into clear, engaging content that resonates with diverse audiences.</p>
+                    
+                    <h3>Education</h3>
+                    <div class="education-item">
+                        <div class="education-year">2010 - 2012</div>
+                        <div class="education-details">
+                            <h4>Master's in English</h4>
+                            <p>Developed advanced linguistic skills and literary analysis capabilities.</p>
+                        </div>
+                    </div>
+                    
+                    <h3>My Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill">
+                            <span class="skill-name">Content Writing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Copywriting</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">SEO</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Research</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <span class="skill-name">Editing</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section">
+            <div class="section-header">
+                <h2>My Portfolio</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="articles">Articles</button>
+                <button class="filter-btn" data-filter="blogs">Blog Posts</button>
+                <button class="filter-btn" data-filter="copywriting">Copywriting</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="articles">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>The Art of Effective Communication</h3>
+                            <p>An in-depth analysis of communication techniques in the digital age.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="blogs">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>5 Tips for Engaging Writing</h3>
+                            <p>Practical strategies to captivate readers and improve engagement.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="copywriting">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>Brand Voice Development</h3>
+                            <p>Case study on creating consistent and compelling brand messaging.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="articles">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>The Evolution of Language</h3>
+                            <p>Exploring how language adapts to cultural and technological changes.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="blogs">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>Writing for Different Platforms</h3>
+                            <p>Adapting content for various digital channels and audiences.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="copywriting">
+                    <div class="portfolio-content">
+                        <div class="portfolio-overlay">
+                            <h3>Email Campaign Series</h3>
+                            <p>Results-driven email sequence for product launches.</p>
+                            <a href="#" class="portfolio-link">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out.</p>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@saifullahkhalid.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+XX XXX XXX XXXX</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>City, Country</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required>
+                            <label for="email">Your Email</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" required>
+                            <label for="subject">Subject</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="focus-border"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot -->
+    <div class="chat-bot">
+        <div class="chat-icon">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Chat with Saifullah's Assistant</h3>
+                <div class="close-chat">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="chat-messages">
+                <div class="message bot">
+                    <p>Hello! I'm Prof Saifullah's virtual assistant. How can I help you today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-message" placeholder="Type your message...">
+                <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">SK</div>
+            <p>Creating impactful content that drives engagement and delivers results.</p>
+            <div class="footer-credits">
+                <p>&copy; 2023 Prof Saifullah Khalid. All Rights Reserved.</p>
+                <p class="made-by">Made with <i class="fas fa-heart"></i> by ZYLOX</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
