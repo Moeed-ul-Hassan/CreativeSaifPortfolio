@@ -17,6 +17,9 @@ const contactForm = document.getElementById('contactForm');
 const chatIcon = document.querySelector('.chat-icon');
 const chatBot = document.querySelector('.chat-bot');
 const closeChat = document.querySelector('.close-chat');
+const testimonialDots = document.querySelectorAll('.dot');
+const testimonialPrev = document.querySelector('.arrow.prev');
+const testimonialNext = document.querySelector('.arrow.next');
 
 // ============ Preloader ============
 function startCounterAnimation() {
@@ -275,6 +278,79 @@ function handleFormInputFocus() {
 
 // Call form input focus handler
 handleFormInputFocus();
+
+// ============ Testimonial Slider ============
+let currentTestimonial = 0;
+const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+// Set initial state
+if (testimonialCards.length > 0) {
+    testimonialCards.forEach((card, index) => {
+        if (index !== 0) {
+            gsap.set(card, { opacity: 0, display: 'none' });
+        }
+    });
+}
+
+// Show a specific testimonial
+function showTestimonial(index) {
+    // Hide current testimonial
+    gsap.to(testimonialCards[currentTestimonial], {
+        opacity: 0,
+        duration: 0.5,
+        onComplete: () => {
+            testimonialCards[currentTestimonial].style.display = 'none';
+            
+            // Show new testimonial
+            testimonialCards[index].style.display = 'block';
+            gsap.to(testimonialCards[index], {
+                opacity: 1,
+                duration: 0.5
+            });
+            
+            // Update current testimonial index
+            currentTestimonial = index;
+            
+            // Update dots
+            testimonialDots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add('active');
+                } else {
+                    dot.classList.remove('active');
+                }
+            });
+        }
+    });
+}
+
+// Next testimonial
+function nextTestimonial() {
+    const nextIndex = (currentTestimonial + 1) % testimonialCards.length;
+    showTestimonial(nextIndex);
+}
+
+// Previous testimonial
+function prevTestimonial() {
+    const prevIndex = (currentTestimonial - 1 + testimonialCards.length) % testimonialCards.length;
+    showTestimonial(prevIndex);
+}
+
+// Set up event listeners
+if (testimonialNext && testimonialPrev) {
+    testimonialNext.addEventListener('click', nextTestimonial);
+    testimonialPrev.addEventListener('click', prevTestimonial);
+    
+    testimonialDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            if (index !== currentTestimonial) {
+                showTestimonial(index);
+            }
+        });
+    });
+    
+    // Auto-play testimonials every 5 seconds
+    setInterval(nextTestimonial, 5000);
+}
 
 // Initialize function for animations and other effects
 function initAnimations() {

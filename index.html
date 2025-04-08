@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="css/chat.css">
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -29,7 +33,9 @@
             <ul>
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -45,7 +51,9 @@
         <ul>
             <li><a href="#home" class="mobile-nav-link">Home</a></li>
             <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
             <li><a href="#portfolio" class="mobile-nav-link">Portfolio</a></li>
+            <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
             <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
         </ul>
     </div>
@@ -139,6 +147,64 @@
             </div>
         </section>
 
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="section-header">
+                <h2>My Services</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Content Writing</h3>
+                    <p>Engaging and informative content tailored to your target audience that drives traffic and boosts engagement.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>Copywriting</h3>
+                    <p>Persuasive copy that converts visitors into customers and effectively communicates your brand message.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO Writing</h3>
+                    <p>SEO-optimized content that ranks well in search engines while maintaining readability and engagement.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Editing & Proofreading</h3>
+                    <p>Meticulous editing and proofreading services to ensure your content is polished, professional, and error-free.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Blog Management</h3>
+                    <p>Comprehensive blog management including content planning, creation, and publishing to maintain a consistent presence.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Content Strategy</h3>
+                    <p>Strategic content planning that aligns with your business goals and resonates with your target audience.</p>
+                    <a href="#contact" class="service-link">Learn More</a>
+                </div>
+            </div>
+        </section>
+
         <!-- Portfolio Section -->
         <section id="portfolio" class="section">
             <div class="section-header">
@@ -153,7 +219,7 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="articles">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>The Art of Effective Communication</h3>
                             <p>An in-depth analysis of communication techniques in the digital age.</p>
@@ -162,7 +228,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="blogs">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>5 Tips for Engaging Writing</h3>
                             <p>Practical strategies to captivate readers and improve engagement.</p>
@@ -171,7 +237,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="copywriting">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1493421419110-74f4e85ba126?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>Brand Voice Development</h3>
                             <p>Case study on creating consistent and compelling brand messaging.</p>
@@ -180,7 +246,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="articles">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>The Evolution of Language</h3>
                             <p>Exploring how language adapts to cultural and technological changes.</p>
@@ -189,7 +255,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="blogs">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>Writing for Different Platforms</h3>
                             <p>Adapting content for various digital channels and audiences.</p>
@@ -198,13 +264,85 @@
                     </div>
                 </div>
                 <div class="portfolio-item" data-category="copywriting">
-                    <div class="portfolio-content">
+                    <div class="portfolio-content" style="background-image: url('https://images.unsplash.com/photo-1516387938699-a93567ec168e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;">
                         <div class="portfolio-overlay">
                             <h3>Email Campaign Series</h3>
                             <p>Results-driven email sequence for product launches.</p>
                             <a href="#" class="portfolio-link">Read More</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section">
+            <div class="section-header">
+                <h2>Client Testimonials</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>Prof Saifullah's writing completely transformed our brand messaging. His ability to capture our voice while enhancing readability is remarkable. Our website traffic has increased by 45% since we implemented his content strategy.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Sarah Johnson">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Marketing Director, TechInnovate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>I've worked with many content writers, but Prof Saifullah stands out for his attention to detail and deep understanding of audience engagement. His blog posts consistently generate the highest engagement across all our channels.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Michael Chen">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Content Manager, GlobalReach Media</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p>Working with Prof Saifullah was a game-changer for our startup. His content not only helped establish our brand voice but also significantly improved our SEO performance. His strategic approach to content is unmatched.</p>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&auto=format&fit=crop&w=150&q=80" alt="Emily Rodriguez">
+                            </div>
+                            <div class="author-info">
+                                <h4>Emily Rodriguez</h4>
+                                <p>Founder, EcoSolutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <div class="testimonial-arrows">
+                    <button class="arrow prev"><i class="fas fa-arrow-left"></i></button>
+                    <button class="arrow next"><i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </section>

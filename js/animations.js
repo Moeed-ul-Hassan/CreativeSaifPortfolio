@@ -137,6 +137,48 @@ function initScrollAnimations() {
         ease: 'power3.out'
     });
     
+    // Services section header animation
+    gsap.from('#services .section-header', {
+        scrollTrigger: {
+            trigger: '#services',
+            start: 'top 70%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+    
+    // Service cards staggered animation
+    gsap.from('.service-card', {
+        scrollTrigger: {
+            trigger: '.services-container',
+            start: 'top 70%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 50,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+    
+    // Service icons bounce animation
+    gsap.from('.service-icon', {
+        scrollTrigger: {
+            trigger: '.services-container',
+            start: 'top 60%',
+            toggleActions: 'play none none none'
+        },
+        scale: 0.5,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: 'elastic.out(1, 0.5)',
+        delay: 0.4
+    });
+    
     // Portfolio section header animation
     gsap.from('#portfolio .section-header', {
         scrollTrigger: {
@@ -161,6 +203,44 @@ function initScrollAnimations() {
         y: 20,
         stagger: 0.1,
         duration: 0.5,
+        ease: 'power3.out'
+    });
+    
+    // Testimonials section animations
+    gsap.from('#testimonials .section-header', {
+        scrollTrigger: {
+            trigger: '#testimonials',
+            start: 'top 70%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+    
+    gsap.from('.testimonial-card', {
+        scrollTrigger: {
+            trigger: '.testimonials-slider',
+            start: 'top 70%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: 'power3.out'
+    });
+    
+    gsap.from('.testimonial-controls', {
+        scrollTrigger: {
+            trigger: '.testimonials-slider',
+            start: 'top 50%',
+            toggleActions: 'play none none none'
+        },
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        delay: 0.3,
         ease: 'power3.out'
     });
     
