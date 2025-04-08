@@ -507,14 +507,11 @@ nav li {
     position: relative;
 }
 
-.image-placeholder {
+.about-profile-img {
     width: 100%;
     aspect-ratio: 1/1;
-    background-color: var(--primary-color);
+    object-fit: cover;
     border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: var(--box-shadow);
 }
 
