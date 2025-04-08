@@ -1,40 +1,21 @@
 // ==================== GSAP Animations ====================
-document.addEventListener('DOMContentLoaded', () => {
-    // Register ScrollTrigger
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Create background particles
-    createParticles();
-    
-    // Initialize animations once preloader is done (called from script.js)
-    window.initAnimations = function() {
-        // Home section animations
-        animateHomeSection();
-        
-        // Reveal text animation
-        animateRevealText();
-        
-        // Scroll-triggered animations
-        initScrollAnimations();
-        
-        // Skills animation
-        animateSkills();
-        
-        // Portfolio items animation
-        animatePortfolioItems();
-    };
-});
 
 // Create and animate background particles
 function createParticles() {
     const container = document.getElementById('particles-container');
     const colors = [
-        'rgba(52, 152, 219, 0.5)',  // Blue
-        'rgba(155, 89, 182, 0.5)',   // Purple
-        'rgba(46, 204, 113, 0.5)',   // Green
-        'rgba(26, 188, 156, 0.5)',   // Teal
-        'rgba(241, 196, 15, 0.5)'    // Yellow
+        'rgba(95, 90, 162, 0.4)',    // Purple-blue (Secondary color)
+        'rgba(255, 107, 107, 0.3)',  // Coral (Accent color)
+        'rgba(78, 205, 196, 0.35)',  // Teal (Accent color 2)
+        'rgba(255, 159, 28, 0.35)',  // Amber (Accent color 3)
+        'rgba(51, 202, 127, 0.3)'    // Fresh green
     ];
+    
+    // Only proceed if container exists
+    if (!container) return;
+    
+    // Clear existing particles
+    container.innerHTML = '';
     
     // Create particles
     for (let i = 0; i < 25; i++) {
@@ -67,19 +48,39 @@ function createParticles() {
         
         // Add to container
         container.appendChild(particle);
-        
-        // Add GSAP animation
-        gsap.to(particle, {
-            x: Math.random() * 200 - 100,
-            y: Math.random() * 200 - 100,
-            rotation: Math.random() * 360,
-            duration: duration,
-            repeat: -1,
-            yoyo: true,
-            ease: 'sine.inOut'
-        });
     }
 }
+
+// Create particles immediately, outside any event handlers
+createParticles();
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Create background particles again to ensure they appear
+    createParticles();
+    
+    // Initialize animations once preloader is done (called from script.js)
+    window.initAnimations = function() {
+        // Home section animations
+        animateHomeSection();
+        
+        // Reveal text animation
+        animateRevealText();
+        
+        // Scroll-triggered animations
+        initScrollAnimations();
+        
+        // Skills animation
+        animateSkills();
+        
+        // Portfolio items animation
+        animatePortfolioItems();
+    };
+});
+
+// Note: createParticles function is defined above
 
 // Home Section Animations
 function animateHomeSection() {

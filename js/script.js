@@ -23,29 +23,39 @@ const testimonialNext = document.querySelector('.arrow.next');
 
 // ============ Preloader ============
 function startCounterAnimation() {
+    // Check if animation already started to avoid multiple counters
+    if (window.counterStarted) return;
+    window.counterStarted = true;
+    
     let count = 0;
     const interval = setInterval(() => {
-        counter.textContent = count;
-        count++;
+        if (counter) counter.textContent = count;
+        count += 2; // Speed up counter (increment by 2)
         
         if (count > 100) {
             clearInterval(interval);
             // Hide preloader with GSAP
-            gsap.to(preloader, {
-                opacity: 0,
-                duration: 0.5,
-                onComplete: () => {
-                    preloader.style.display = 'none';
-                    // Initialize animations after preloader
-                    initAnimations();
-                }
-            });
+            if (preloader) {
+                gsap.to(preloader, {
+                    opacity: 0,
+                    duration: 0.3, // Faster transition
+                    onComplete: () => {
+                        if (preloader) preloader.style.display = 'none';
+                        // Initialize animations after preloader
+                        if (typeof initAnimations === 'function') {
+                            initAnimations();
+                        }
+                    }
+                });
+            }
         }
-    }, 20);
+    }, 10); // Faster interval (10ms instead of 20ms)
 }
 
-// Start the counter animation when the page has loaded
+// Start the counter animation as soon as script loads
 window.addEventListener('load', startCounterAnimation);
+// Also start it immediately to avoid the page being stuck on the preloader
+document.addEventListener('DOMContentLoaded', startCounterAnimation);
 
 // ============ Custom Cursor ============
 function updateCursor(e) {
@@ -65,11 +75,11 @@ function updateCursor(e) {
         target.classList.contains('chat-icon')) {
         cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
         cursor.style.mixBlendMode = 'normal';
-        cursor.style.backgroundColor = 'rgba(52, 152, 219, 0.2)';
+        cursor.style.backgroundColor = 'rgba(95, 90, 162, 0.25)';
     } else {
         cursor.style.transform = 'translate(-50%, -50%) scale(1)';
         cursor.style.mixBlendMode = 'difference';
-        cursor.style.backgroundColor = 'rgba(52, 152, 219, 0.3)';
+        cursor.style.backgroundColor = 'rgba(95, 90, 162, 0.3)';
     }
 }
 

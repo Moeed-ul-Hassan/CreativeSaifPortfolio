@@ -1,23 +1,23 @@
 /* ====================== Base Styles ====================== */
 :root {
-    /* Color Palette - More Creative and Vibrant */
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --accent-color-2: #9b59b6;
-    --accent-color-3: #f39c12;
-    --light-color: #ecf0f1;
-    --dark-color: #121212;
-    --gray-color: #95a5a6;
+    /* Color Palette - Ultra Modern and Creative */
+    --primary-color: #2A2D43;       /* Dark blue-gray */
+    --secondary-color: #5F5AA2;     /* Purple-blue */
+    --accent-color: #FF6B6B;        /* Coral */
+    --accent-color-2: #4ECDC4;      /* Teal */
+    --accent-color-3: #FF9F1C;      /* Amber */
+    --light-color: #F7F9FB;         /* Off-white */
+    --dark-color: #1A1B26;          /* Dark blue-black */
+    --gray-color: #8D99AE;          /* Blue-gray */
     
     /* New Creative Colors */
-    --teal-color: #1abc9c;
-    --emerald-color: #2ecc71;
-    --purple-color: #9b59b6;
-    --orange-color: #f39c12;
-    --pakistani-green: #01411c;
-    --pakistani-blue: #00a1c9;
-    --gold-color: #f1c40f;
+    --teal-color: #55DDE0;          /* Bright teal */
+    --emerald-color: #33CA7F;       /* Fresh green */
+    --purple-color: #845EC2;        /* Rich purple */
+    --orange-color: #FF9671;        /* Soft orange */
+    --pakistani-green: #006D77;     /* Deep teal */
+    --pakistani-blue: #00A8E8;      /* Bright blue */
+    --gold-color: #FFD166;          /* Muted gold */
     
     /* Typography */
     --heading-font: 'Playfair Display', serif;
@@ -38,20 +38,20 @@
     
     /* Other */
     --border-radius: 4px;
-    --border-radius-lg: 12px;
-    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    --box-shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
-    --box-shadow-colored: 0 5px 15px rgba(52, 152, 219, 0.3);
+    --border-radius-lg: 16px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --box-shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+    --box-shadow-colored: 0 5px 15px rgba(95, 90, 162, 0.25);
     
     /* Enhanced Gradients */
-    --gradient-primary: linear-gradient(135deg, var(--secondary-color), var(--accent-color-2));
+    --gradient-primary: linear-gradient(135deg, var(--secondary-color), #867ae9);
     --gradient-secondary: linear-gradient(135deg, var(--accent-color), var(--accent-color-3));
     --gradient-teal: linear-gradient(135deg, var(--teal-color), var(--emerald-color));
     --gradient-pakistan: linear-gradient(135deg, var(--pakistani-green), var(--pakistani-blue));
     --gradient-sunset: linear-gradient(135deg, var(--orange-color), var(--accent-color));
     --gradient-royal: linear-gradient(135deg, var(--purple-color), var(--secondary-color));
     --gradient-gold: linear-gradient(135deg, var(--gold-color), var(--orange-color));
-    --gradient-background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --gradient-background: linear-gradient(135deg, #EFF7F6 0%, #E5E9F0 100%);
 }
 
 * {
@@ -194,7 +194,7 @@ img {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: rgba(52, 152, 219, 0.3);
+    background-color: rgba(95, 90, 162, 0.3);
     mix-blend-mode: difference;
     pointer-events: none;
     transform: translate(-50%, -50%);
@@ -622,7 +622,7 @@ nav li {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.75);
     border-radius: var(--border-radius-lg);
     padding: var(--spacing-md);
     text-align: center;
@@ -634,6 +634,7 @@ nav li {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
 }
 
 .service-card:before {
@@ -876,7 +877,7 @@ nav li {
 }
 
 .testimonial-content {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: var(--spacing-md) var(--spacing-lg);
     border-radius: var(--border-radius-lg);
     box-shadow: var(--box-shadow);
@@ -885,6 +886,7 @@ nav li {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     transition: all var(--transition-medium);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
 }
 
 .testimonial-content:hover {
@@ -1165,10 +1167,10 @@ nav li {
 }
 
 .contact-form {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.75);
     padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1271,9 +1273,12 @@ nav li {
 
 /* ====================== Footer ====================== */
 footer {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
     color: var(--light-color);
     padding: var(--spacing-md);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -8px 32px rgba(31, 38, 135, 0.1);
 }
 
 .footer-content {
